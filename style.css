@@ -1,0 +1,525 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+main {
+  background-color: #fafbff;
+  height: 650px;
+  width: 70px;
+}
+
+  main input {
+    position: absolute;
+    top: 10px;
+    left: 550px;
+    width: 250px;
+    height: 28px;
+    border: 1px solid #f7f7f7;
+    border-radius: 6px;
+    background-color: #f3f7fa;
+  }
+
+  ::placeholder {
+    position: relative;
+    left: 20px;
+    color: #7e7fa2;
+  }
+
+  .logo svg {
+    width: 30px;
+    padding: 15px;
+  }
+
+  main h1 {
+      font-size: 12px;
+      position: relative;
+      top: -17px;
+      padding-left: 6px;
+    }
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  gap: 15px;
+}
+
+.icon {
+  margin: 10px 0;
+  cursor: pointer;
+  width: 2px;
+  height: 2px;
+}
+
+.content {
+  background-color: #f3f4f8;
+  width: 850px;
+  height: 600px;
+  border-left: 2px solid #ccc0px 0 5px rgba(0,0,0,0.1);
+  position: relative;
+  top: 48px;
+}
+
+.task-container {
+  position: fixed;
+  top: 0;
+  left: 70px; /* Adjust based on icon width + padding */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: none;
+}
+
+.task-container.active {
+  transform: translateX(0);
+  display: block;
+}
+
+.box-task {
+  position: relative;
+  left: 30px;
+  display: flex;
+  gap: 20px;
+  height: 100px;
+}
+
+.box1 {
+  position: relative;
+  background-color: #fff;
+  top: 50px;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+}
+
+.box1 svg {
+  background-color: #e8ebf0;
+  border-radius: 10px;
+}
+
+.box1-complete {
+  position: relative;
+  top: -38px;
+  left: 30px;
+  color: #9aa4b2;
+  display: flex;
+  gap: 20px;
+}
+
+.box1-num {
+  color: black;
+  font-weight: bolder;
+}
+
+.box1-p2 {
+  position: relative;
+  left: 80px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #9ba3ad;
+
+}
+
+.box1-p2 b {
+  color: green;
+}
+
+.box1-p2 span {
+  position: relative;
+  left: 35px;
+}
+
+.box1-boder {
+  border: 1px solid rgb(218, 213, 213);
+  position: relative;
+  top: -20px;
+}
+
+.box2 {
+  position: relative;
+  background-color: #fff;
+  top: 50px;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+}
+
+.box2 svg {
+  background-color: #e8ebf0;
+  border-radius: 10px;
+}
+
+.box2-complete {
+  position: relative;
+  top: -38px;
+  left: 30px;
+  color: #9aa4b2;
+  display: flex;
+  gap: 20px;
+}
+
+.box2-num {
+  color: black;
+  font-weight: bolder;
+}
+
+.box2-p2 {
+  position: relative;
+  left: 80px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #9ba3ad;
+
+}
+
+.box2-p2 b {
+  color: green;
+}
+
+.box2-p2 span {
+  position: relative;
+  left: 35px;
+}
+
+.box2-boder {
+  border: 1px solid rgb(218, 213, 213);
+  position: relative;
+  top: -20px;
+}
+
+.box3 {
+  position: relative;
+  background-color: #fff;
+  top: 50px;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+}
+
+.box3 svg {
+  background-color: #e8ebf0;
+  border-radius: 10px;
+}
+
+.box3-complete {
+  position: relative;
+  top: -38px;
+  left: 30px;
+  color: #9aa4b2;
+  display: flex;
+  gap: 20px;
+}
+
+.box3-num {
+  color: black;
+  font-weight: bolder;
+}
+
+.box3-p2 {
+  position: relative;
+  left: 80px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #9ba3ad;
+
+}
+
+.box3-p2 b {
+  color: green;
+}
+    
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  position: relative;
+  top: 50px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+  left: 180px;
+}
+
+.tab-button {
+    background-color: #f3f3f4;
+    color: 4C4C7E;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  font-weight: 900;
+  font-family: san serif;
+}
+
+.tab-button:hover {
+    background-color: #fff;
+}
+
+.chart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  left: 12px;
+  width: 720px;
+  height: 120px;
+}
+
+.reminder {
+  position: relative;
+  top: -50px;
+  left: 30px;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  width: 730px;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.task p {
+  position: relative;
+  top: 60px;
+  left: 30px;
+  font-size: 20px;
+}
+
+.reminder-down{
+  display: flex;
+  position: relative;
+}
+
+.reminderp1 {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+  left: 12px;
+}
+
+.reminderp2 {
+  position: relative;
+  left: -45px;
+  top: 15px;
+  font-size: 10px;
+}
+
+.reminder-inspiration {
+  font-size: 13px;
+  position: relative;
+  top: -10px;
+  font-weight: bold;
+}
+
+.link a {
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.comments {
+  position: absolute;
+  right: -60px;
+  top: 25px;
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+}
+
+.comments span {
+  position: relative
+  top: 10px;
+  left: -10px;
+}
+
+.progress-container {
+  width: 50%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  left: 280px;
+  top: 40px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 3px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.progress-text {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.progress-p {
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.alarm {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 410px;
+  top: 10px;
+  background-color: #f3f4f8;
+  color: blue;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.alarm svg {
+  position: relative;
+  top: 10px;
+}
+
+.reminder2 {
+  position: relative;
+  top: -50px;
+  left: 30px;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  width: 730px;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.task2 p {
+  position: relative;
+  top: 60px;
+  left: 30px;
+  font-size: 20px;
+}
+
+.reminder-down2{
+  display: flex;
+  position: relative;
+}
+
+.reminderp12 {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+  left: 12px;
+}
+
+.reminderp22 {
+  position: relative;
+  left: -45px;
+  top: 15px;
+  font-size: 10px;
+}
+
+.reminder-inspiration2 {
+  font-size: 13px;
+  position: relative;
+  top: -10px;
+  font-weight: bold;
+}
+
+.link2 a {
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.comments2 {
+  position: absolute;
+  right: -60px;
+  top: 25px;
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+}
+
+.comments2 span {
+  position: relative
+  top: 10px;
+  left: -10px;
+}
+
+.progress-container2 {
+  width: 50%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  left: 280px;
+  top: 40px;
+}
+
+.progress-bar2 {
+  width: 0%;
+  height: 3px;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.progress-text2 {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.progress-p2 {
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.alarm2 {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 410px;
+  top: 10px;
+  background-color: #f3f4f8;
+  color: blue;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.alarm2 svg {
+  position: relative;
+  top: 10px;
+}
